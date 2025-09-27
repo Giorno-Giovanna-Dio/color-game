@@ -93,7 +93,7 @@ onMounted(() => {
 
   // 初始化 Google Identity Services
   google.accounts.id.initialize({
-    client_id: "319505686194-2126ipcp4b7094l6og1np8qks7agg2d3.apps.googleusercontent.com", // 換成你的 Client ID
+    client_id: import.meta.env.VITE_GOOGLE_CLIENT_ID,
     callback: (window as any).handleGoogleCallback,
   })
 
