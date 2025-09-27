@@ -90,9 +90,7 @@ SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.getenv("GOOGLE_OAUTH_CLIENT_SECRET", "")
 
 # CORS：允許前端 dev 來源
 CORS_ALLOW_ALL_ORIGINS = False
-CORS_ALLOWED_ORIGINS = [
-    os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:5173")
-]
+CORS_ALLOWED_ORIGINS = os.getenv("CORS_ALLOWED_ORIGINS", "http://localhost:5173").split(",")
 
 LANGUAGE_CODE = "en-us"
 TIME_ZONE = "UTC"
